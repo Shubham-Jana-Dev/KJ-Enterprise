@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KJ Enterprise</title>
+    <link rel="icon" href="Photos/PHOTO-2025-03-22-22-49-42.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Roboto+Slab:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        .book-button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .book-button:hover {
+            background-color: #3e8e41;
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-image: url('Photos/banner-new.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background: #5cb85c;
+            /* Eco-friendly green */
+            padding: 0.9rem 0;
+            text-align: left;
+            transition: background-color 0.3s ease;
+        }
+
+        header:hover {
+            background: #6ac26a;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+
+        header .logo img {
+            width: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        header .logo img:hover {
+            transform: rotate(360deg);
+        }
+
+        header h1 {
+            margin: 0;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            font-family: 'Roboto Slab', serif;
+            font-weight: 600;
+        }
+
+        nav {
+            background: #333;
+            padding: 0.5rem 0;
+            text-align: center;
+            margin-top: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            border-radius: 25px;
+        }
+
+        nav:hover {
+            background: #444;
+        }
+
+        nav a {
+            color: #f0f0f0;
+            text-decoration: none;
+            padding: 0.75rem 1.25rem;
+            display: inline-block;
+            transition: color 0.3s ease, transform 0.3s ease;
+            border-radius: 20px;
+        }
+
+        nav a:hover {
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            background-image: url('assets/images/scooter-bg.jpg');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 5rem 0;
+            overflow: hidden;
+            position: relative;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+            border-radius: 15px;
+        }
+
+        .hero-content {
+            background-color: rgba(92, 184, 92, 0.5);
+            /* Increased transparency */
+            padding: 3rem;
+            /* Increased padding */
+            border-radius: 10px;
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            font-family: 'Roboto Slab', serif;
+            font-weight: 600;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: #5cb85c;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #4cae4c;
+            transform: scale(1.1);
+        }
+
+        .models-section {
+            padding: 3rem 0;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .models-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #333;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 600;
+        }
+
+        .models-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .scooter-section {
+            padding: 3rem 0;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .scooter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .scooter-card {
+            width: 300px;
+            margin: 1rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            background-color: #fff;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .scooter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .scooter-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .scooter-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .scooter-card h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 600;
+        }
+
+        .scooter-card p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .about-section {
+            padding: 3rem 0;
+            background-color: #fff;
+            margin-bottom: auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #333;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 600;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .about-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 1rem;
+        }
+
+        .about-content ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #5cb85c;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            max-height: 80vh;
+            /* Limit maximum height to 80% of the viewport height */
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #888;
+        }
+
+        /* WhatsApp Button Styles */
+        /* WhatsApp Button Styles */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        .whatsapp-button a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Call Button Styles */
+        .call-button {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 99;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        .call-button a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Location Button Styles */
+        .location-button {
+            position: fixed;
+            bottom: 160px;
+            /* Positioned above Call button */
+            right: 20px;
+            background-color: #dc3545;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 98;
+            /* Placed below WhatsApp button */
+        }
+
+        .location-button a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Inquiry Button Styles */
+        .inquiry-button {
+            position: fixed;
+            bottom: 230px;
+            /* Adjust as needed */
+            right: 20px;
+            background-color: #007bff;
+            /* Use a suitable color */
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 97;
+            /* Ensure it's above other buttons */
+        }
+
+        .inquiry-button a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Facebook Button Styles */
+        .facebook-button {
+            position: fixed;
+            bottom: 300px;
+            /* Adjust as needed */
+            right: 20px;
+            background-color: #1877F2;
+            /* Facebook blue */
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 96;
+            /* Ensure it's above other buttons */
+        }
+
+        .facebook-button a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Crazy Animations */
+        .scooter-card:nth-child(odd) {
+            animation: flyInLeft 2s ease-out;
+        }
+
+        .scooter-card:nth-child(even) {
+            animation: flyInRight 2s ease-out;
+        }
+
+        @keyframes flyInLeft {
+            from {
+                transform: translateX(-1000px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes flyInRight {
+            from {
+                transform: translateX(1000px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Marquee Styles */
+        .marquee-container {
+            overflow: scroll;
+            white-space: nowrap;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%;
+            /* Start the text off screen */
+            animation: marquee 80s linear infinite;
+            /* Adjust speed as needed */
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const scooterCards = document.querySelectorAll('.scooter-card');
+
+            scooterCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-5px)';
+                    card.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.2)';
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+                });
+            });
+
+            // JavaScript to handle modal display
+            const viewDetailsButtons = document.querySelectorAll('.view-details-btn');
+            const modal = document.getElementById('scooterModal');
+            const modalContent = document.querySelector('.modal-content');
+            const closeButton = document.querySelector('.close-button');
+
+            viewDetailsButtons.forEach(button => {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const scooterId = this.getAttribute('data-scooter-id');
+                    // Fetch scooter details based on scooterId (replace with actual data)
+                    const scooterDetails = getScooterDetails(scooterId);
+
+                    // Populate modal content
+                    modalContent.innerHTML = `
+                        <span class="close-button">&times;</span>
+                        <h3>${scooterDetails.name}</h3>
+                        <img src="${scooterDetails.image}" alt="${scooterDetails.name}" style="width: 100%;">
+                        <p>${scooterDetails.description}</p>
+
+                        ${scooterDetails.Storage ? `<p><b>Storage:</b> ${scooterDetails.Storage}</p>` : ''}
+
+                        ${scooterDetails.Seating ? `<p><b>Seating Capacity:</b> ${scooterDetails.Seating}</p>` : ''}
+
+                        
+                        ${scooterDetails.color ? `<p><b>Color:</b>${scooterDetails.color}</p>` : ''}
+
+                        ${scooterDetails.Display ? `<p><b>Display:</b>${scooterDetails.Display}</p>` : ''}
+
+                        ${scooterDetails.Battery ? `<p><b>Battery & Range:</b> ${scooterDetails.Battery}</p>` : ''}
+
+                        ${scooterDetails.Chargeing_time ? `<p><b>Chargeing time:</b>${scooterDetails.Chargeing_time}</p>` : ''}
+
+                        ${scooterDetails.Performance ? `<p><b>Performance:</b> ${scooterDetails.Performance}</p>` : ''}
+
+                        ${scooterDetails.TopSpeed ? `<p><b>Top Speed:</b> ${scooterDetails.TopSpeed}</p>` : ''}
+
+                        ${scooterDetails.Warranty ? `<p><b>Warranty:</b> ${scooterDetails.Warranty}</p>` : ''}
+
+                         ${scooterDetails.Braking_System ? `<p><b>Braking System:</b>${scooterDetails.Braking_System}</p>` : ''}
+
+                         ${scooterDetails.Additional_Features ? `<p><b>Additional Features:</b>${scooterDetails.Additional_Features}</p>` : ''}
+
+                         ${scooterDetails.Wheel_Size ? `<p><b>Wheel Size:</b>${scooterDetails.Wheel_Size}</p>` : ''}
+
+                        ${scooterDetails.Manufacturing_Location ? `<p><b>Manufacturing Location:</b>${scooterDetails.Manufacturing_Location}</p>` : ''}
+                        ${scooterDetails.motor ? `<p><b>Power Motor:</b>${scooterDetails.motor}</p>` : ''}
+
+                        <p><b>Price:</b> ${scooterDetails.price ? scooterDetails.price : 'N/A'}</p>
+                        <a href="tel:9733579705" class="book-button">Call to Book</a>
+                    `;
+
+                    modal.style.display = 'block';
+
+                    // Add event listener for the close button inside the modal
+                    const newCloseButton = modalContent.querySelector('.close-button');
+                    newCloseButton.addEventListener('click', function () {
+                        modal.style.display = 'none';
+                    });
+                });
+            });
+
+            closeButton.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+
+            // Dummy function to simulate fetching scooter details
+            function getScooterDetails(id) {
+                // Replace this with actual data fetching logic
+                switch (id) {
+                    case '1':
+                        return {
+                            name: 'Eblu Feo X',
+                            image: 'Photos/feo.jpg',
+                            description: 'The Godawari Eblu Feo X is an electric scooter designed for family use, offering extra storage and comfort.',
+                            Storage: '28-liter under-seat storage, spacious enough to carry a gas cylinder.',
+                            Seating: 'Designed for driver + pillion rider.',
+                            color: 'Available in Pantone Blue, Wine Red, Jet Black, Telegrey, and Traffic White.',
+
+                            Display: '7.4-inch Smart multi-colored TFT instrument console with Bluetooth connectivity, call alerts, and a side stand indicator.',
+
+                            Battery: 'Fixed floor-mounted 2.36 kWh battery, providing a 110 km range per full charge.',
+                            Chargeing_time: 'Takes approximately 5 hours and 25 minutes to fully charge.',
+                            Performance: 'Travel up to 110 Kms per charge*, making it ideal for long distances without frequent recharging.',
+                            TopSpeed: 'Achieves a top speed of 60 KM/h*, ensuring a quick and efficient ride.',
+                            Wheel_Size: '12-inch front and rear wheels, providing stability and comfort on the road.',
+                            Additional_Features: 'USB Charging Port, Reverse Button, Parking Switch, Durable Front & Rear Shock Absorbers, Fire-resistant Wire Harness, Waterproof Throttle & Switches, Ground Clearance: 170mm, suitable for Indian roads.',
+                            Braking_System: 'Combi Braking System (CBS), linking front and rear brakes for better control.',
+                            Warranty: '5-year warranty or 50,000 km, whichever comes first.',
+                            price: 'Find out our best deals! Contact us for pricing details.',
+                            Manufacturing_Location: 'Manufactured in India.',
+
+                        };
+
+                    case '2':
+                        return {
+                            name: 'Mudit Ridh KING',
+                            image: 'Photos/Scooties/King02.jpg',
+                            description: 'The Mudit Ridh KING is a stylish, eco-friendly electric scooter with a BLDC motor, waterproof rating, and 60V battery. It features a color display, reverse mode, USB charging, and 190mm ground clearance, making it perfect for daily commuting.',
+                            Space: '28-liter Family Size Boot Spaceand Spacious Legroom',
+                            color: 'Available in Red, Blue, and White.',
+                            Display: 'Color Display.',
+                            Battery: '60V 28AH Lead Acid Battery.Above 80 km per charge.',
+                            Chargeing_time: 'Above 5 hours.',
+                            Performance: 'Range: Travel up to 110 Kms per charge*, making it ideal for long distances without frequent recharging.',
+                            Additional_Features: 'USB Charging Port, Reverse Button, Parking Switch, Durable Front & Rear Shock Absorbers, Fire-resistant Wire Harness, Waterproof Throttle & Switches, Ground Clearance: 190mm, suitable for Indian roads,Color Display.',
+                            Braking_System: 'Front Disc Brake, Rear Drum Brake.',
+                            Wheel_Size: '12-inch front and rear wheels, providing stability and comfort on the road.',
+                            TopSpeed: 'Achieves a top speed of 60 KMPH*, ensuring a quick and efficient ride.',
+                            motor: 'BLDC Motor, waterproof IP67 rating.',
+                            Warranty: '12-month warranty on motor, controller, charger, and battery.',
+                            price: 'Find out our best deals! Contact us for pricing details.',
+                            Manufacturing_Location: 'Manufactured in Kolkata, West Bengal, India.',
+                        };
+                    case '3':
+                        return {
+                            name: 'Mudit Ridh EXPLORER',
+                            image: 'Photos/Scooties/Explorer02.jpg',
+                            description: 'The Mudit Ridh Xplorer is an efficient electric scooter with a 250W BLDC motor, 100-110 km range, and 190mm ground clearance, ideal for urban commuting.',
+                            Space: '28-liter Family Size Boot Spaceand Spacious Legroom',
+                            color: 'Available in Red, Blue, and White.',
+                            Display: 'Color digital meter.',
+                            Battery: 'Available in Lithium-Ion and Lead-Acid options.100-110 km per charge.',
+                            Chargeing_time: ' 4 to 6 hours (depending on the variant).',
+                            Performance: 'Range: Travel up to 110 Kms per charge*, making it ideal for long distances without frequent recharging.',
+                            Additional_Features: 'USB Charging Port, Reverse Button, Parking Switch, Durable Front & Rear Shock Absorbers, Fire-resistant Wire Harness, Waterproof Throttle & Switches, Ground Clearance: 190mm, suitable for Indian roads,Color Display.',
+                            Braking_System: 'Front Disc Brake, Rear Drum Brake.',
+                            Wheel_Size: '12-inch front and rear wheels, providing stability and comfort on the road.',
+                            TopSpeed: '40-45 km/h.',
+                            motor: '250W BLDC hub-mounted motor.',
+                            Warranty: '3 years on motor, battery, and vehicle.',
+                            price: 'Find out our best deals! Contact us for pricing details.',
+                            Manufacturing_Location: 'Manufactured in Kolkata, West Bengal, India.',
+                        };
+                    case '4':
+                        return {
+
+                            name: "Mudit Ridh IMPULSER",
+                            image: "Photos/Scooties/Impulser02.jpg",
+                            description: "The Mudit Ridh Impulser is a powerful electric scooter with a 250W BLDC motor, 100-110 km range, and 190mm ground clearance, designed for smooth urban commuting.",
+                            Space: "Spacious legroom and family-size boot space.",
+                            color: "Available in Sky Blue, Green, and White.",
+                            Display: "Color digital meter.",
+                            Battery: "Available in Lithium-Ion and Lead-Acid options. 100-110 km per charge.",
+                            Charging_time: "3 to 6 hours (depending on the variant).",
+                            Performance: "Range: Travel up to 110 km per charge*, making it ideal for long distances without frequent recharging.",
+                            Additional_Features: "USB Charging Port, Reverse Button, Parking Switch, Durable Front & Rear Shock Absorbers, Fire-resistant Wire Harness, Waterproof Throttle & Switches, Ground Clearance: 190mm, suitable for Indian roads, Color Display.",
+                            Braking_System: "Front Disc Brake, Rear Drum Brake.",
+                            Wheel_Size: "12-inch front and rear wheels, providing stability and comfort on the road.",
+                            TopSpeed: "40-45 km/h.",
+                            motor: "250W BLDC hub-mounted motor.",
+                            Warranty: "3 years on motor, battery, and vehicle.",
+                            price: "Find out our best deals! Contact us for pricing details.",
+                            Manufacturing_Location: "Manufactured in Kolkata, West Bengal, India."
+
+
+                        };
+                    case '5':
+                        return {
+                            name: "Mudit Ridh LOADER",
+                            image: "Photos/Scooties/Loader02.jpg",
+                            description: "The Mudit Ridh Loader is a durable electric scooter designed for heavy-duty transport, featuring a 250W BLDC motor, 100-120 km range, and 400 kg load capacity.",
+                            Space: "Heavy-duty cargo space with reinforced frame for stability.",
+                            color: "Available in Black.",
+                            Display: "Digital meter.",
+                            Battery: "Lithium-Ion and Lead-Acid options, providing 100-120 km per charge.",
+                            Charging_time: "3 to 6 hours (depending on the variant).",
+                            Performance: "Range: Travel up to 120 km per charge*, making it ideal for long distances without frequent recharging.",
+                            Additional_Features: "USB Charging Port, Reverse Button, Parking Switch, Durable Front & Rear Shock Absorbers, Fire-resistant Wire Harness, Waterproof Throttle & Switches, Ground Clearance: 190mm, suitable for Indian roads.",
+                            Braking_System: "Front Disc Brake, Rear Drum Brake.",
+                            Wheel_Size: "12-inch front and rear wheels, providing stability and comfort on the road.",
+                            TopSpeed: "25-35 km/h.",
+                            motor: "250W BLDC hub-mounted motor.",
+                            Warranty: "3 years on motor, battery, and vehicle.",
+                            price: "Find out our best deals! Contact us for pricing details.",
+                            Manufacturing_Location: "Manufactured in Kolkata, West Bengal, India."
+                        }
+                            ;
+                    case '6':
+                        return {
+                            name: "Mudit Ridh LYRA",
+                            image: "Photos/Scooties/Lyra02.jpg",
+                            description: "The Mudit Ridh Lyra is a sleek and efficient electric scooter with a 250W BLDC motor, 100-110 km range, and 190mm ground clearance, perfect for urban commuting.",
+                            Space: "Spacious legroom and family-size boot space.",
+                            color: "Available in Red and White.",
+                            Display: "Color digital meter.",
+                            Battery: "Available in Lithium-Ion and Lead-Acid options. 100-110 km per charge.",
+                            "Charging_time": "3 to 6 hours (depending on the variant).",
+                            Performance: "Range: Travel up to 110 km per charge*, making it ideal for long distances without frequent recharging.",
+                            Additional_Features: "USB Charging Port, Reverse Button, Parking Switch, Durable Front & Rear Shock Absorbers, Fire-resistant Wire Harness, Waterproof Throttle & Switches, Ground Clearance: 190mm, suitable for Indian roads, Color Display.",
+                            Braking_System: "Front Drum Brake, Rear Drum/Disc Brake (Optional).",
+                            Wheel_Size: "12-inch front and rear wheels, providing stability and comfort on the road.",
+                            TopSpeed: "40-45 km/h.",
+                            motor: "250W BLDC hub-mounted motor.",
+                            Warranty: "3 years on motor, battery, and vehicle.",
+                            price: "Find out our best deals! Contact us for pricing details.",
+                            Manufacturing_Location: "Manufactured in Kolkata, West Bengal, India."
+                        }
+                            ;
+                    case '7':
+                        return {
+                            name: "Mudit Ridh NEON",
+                            image: "Photos/Scooties/Neon02.jpg",
+                            description: "The Mudit Ridh Neon is a high-performance electric scooter with a powerful 800-3000W BLDC motor, 180 km range, and 190mm ground clearance, designed for smooth urban commuting.",
+                            Space: "Spacious legroom and family-size boot space.",
+                            color: "Available in Red, Blue, and Black.",
+                            Display: "LCD Color Display.",
+                            Battery: "Available in 60V and 72V Lithium-Ion and Lead-Acid options. 180 km per charge.",
+                            Charging_time: "3 to 6 hours (depending on the variant).",
+                            Performance: "Range: Travel up to 180 km per charge*, making it ideal for long distances without frequent recharging.",
+                            Additional_Features: "USB Charging Port, Reverse Button, Parking Switch, Durable Front & Rear Shock Absorbers, Fire-resistant Wire Harness, Waterproof Throttle & Switches, Ground Clearance: 190mm, suitable for Indian roads.",
+                            Braking_System: "Front Drum Brake, Rear Drum/Disc Brake (Optional).",
+                            Wheel_Size: "12-inch front and rear alloy wheels, providing stability and comfort on the road.",
+                            TopSpeed: "50-55 km/h.",
+                            motor: "800-3000W BLDC hub-mounted motor.",
+                            Warranty: "1 year on motor, battery, and vehicle.",
+                            price: "Find out our best deals! Contact us for pricing details.",
+                            Manufacturing_Location: "Manufactured in Kolkata, West Bengal, India."
+                        }
+                            ;
+
+                    case '8':
+                        return {
+                            name: "Mudit Ridh ROVER",
+                            image: "Photos/Scooties/Rover02.jpg",
+                            description: "The Mudit Ridh Rover is a powerful electric scooter with a 500-3000W BLDC motor, 70-90 km range, and 190mm ground clearance, designed for smooth urban commuting.",
+                            Space: "Spacious legroom and family-size boot space.",
+                            color: "Available in Red and Black.",
+                            Display: "Digital meter.",
+                            Battery: "72V 28AH Lead Acid Battery, providing 70-90 km per charge.",
+                            Charging_time: "Above 5 hours.",
+                            Performance: "Range: Travel up to 90 km per charge*, making it ideal for daily commuting.",
+                            Additional_Features: "USB Charging Port, Reverse Button, Parking Switch, Durable Front & Rear Shock Absorbers, Fire-resistant Wire Harness, Waterproof Throttle & Switches, Ground Clearance: 190mm, suitable for Indian roads.",
+                            Braking_System: "Front Disc Brake, Rear Drum Brake.",
+                            Wheel_Size: "12-inch front and rear wheels, providing stability and comfort on the road.",
+                            TopSpeed: "50 km/h.",
+                            motor: "500-3000W BLDC hub-mounted motor.",
+                            Warranty: "1 year on motor, battery, and vehicle.",
+                            price: "Find out our best deals! Contact us for pricing details.",
+                            Manufacturing_Location: "Manufactured in Kolkata, West Bengal, India."
+                        }
+
+                            ;
+                    case '9':
+                        return {
+                            name: "Mudit Ridh ZIGMO",
+                            image: "Photos/Scooties/Zingo02.jpg",
+                            description: "The Mudit Ridh Zigmo is a compact and efficient electric scooter with a 250W BLDC motor, 80-100 km range, and 190mm ground clearance, ideal for urban commuting.",
+                            Space: "Spacious legroom and family-size boot space.",
+                            color: "Available in Red, Blue, and White.",
+                            Display: "Color digital meter.",
+                            Battery: "Available in Lithium-Ion and Lead-Acid options. 80-100 km per charge.",
+                            Charging_time: "3 to 6 hours (depending on the variant).",
+                            Performance: "Range: Travel up to 100 km per charge*, making it ideal for long distances without frequent recharging.",
+                            Additional_Features: "USB Charging Port, Reverse Button, Parking Switch, Durable Front & Rear Shock Absorbers, Fire-resistant Wire Harness, Waterproof Throttle & Switches, Ground Clearance: 190mm, suitable for Indian roads, Color Display.",
+                            Braking_System: "Front Disc Brake, Rear Drum Brake.",
+                            Wheel_Size: "12-inch front and rear wheels, providing stability and comfort on the road.",
+                            TopSpeed: "40-45 km/h.",
+                            motor: "250W BLDC hub-mounted motor.",
+                            Warranty: "3 years on motor, battery, and vehicle.",
+                            price: "Find out our best deals! Contact us for pricing details.",
+                            Manufacturing_Location: "Manufactured in Kolkata, West Bengal, India."
+                        }
+                            ;
+                    case '10':
+                        return {
+                            name: 'Mudit Ridh HEAVY',
+                            image: 'Photos/Scooties/Heavy02 2.jpg',
+                            description: 'Mudit Ridh HEAVY is a three-wheeler electric vehicle, likely designed for durability and efficient transportation. While specific details about this model are not widely available, Mudit Ridh specializes in eco-friendly electric vehicles with advanced features like BLDC motors, smart controllers, and high-performance lithium batteries.',
+                            price: 'Find out our best deals! Contact us for pricing details.'
+                        };
+                    case '11':
+                        return {
+                            name: 'Mudit Ridh RE-ECO',
+                            image: 'Photos/Scooties/Re-eco 2.jpg',
+                            description: 'For more information please call Us.',
+                            price: 'Find out our best deals! Contact us for pricing details.'
+                        };
+                    case '12':
+                        return {
+                            name: 'Mudit Ridh FLEXI',
+                            image: 'Photos/Scooties/Flexi02 2.jpg',
+                            description: 'For more information please call Us.',
+                            price: 'Find out our best deals! Contact us for pricing details.'
+                        };
+                    case '13':
+                        return {
+                            name: 'Model X13',
+                            image: 'feo.jpg',
+                            description: 'The Model X7 is a high-performance scooter.',
+                            price: 'Find out our best deals! Contact us for pricing details.'
+                        };
+                    case '14':
+                        return {
+                            name: "Eblu Spin",
+                            image: "Photos/Scooties/Eblu spin.png",
+                            description: "Eblu Spin is an electric cycle designed for modern urban mobility, featuring a 250W motor, 0.43 kWh battery, and a 50 km range per charge, making it ideal for eco-friendly commuting.",
+                            Space: "Compact and ergonomic frame with a comfortable seating position.",
+                            color: "Available in multiple stylish colors to match your personality.",
+                            Display: "Digital speedometer for real-time tracking.",
+                            Battery: "0.43 kWh battery with a range of 50 km per charge.",
+                            Charging_time: "Standard charging time for optimized battery performance.",
+                            Performance: "Top speed of 25 km/h, perfect for urban commuting.",
+                            Additional_Features: "Double disc brakes, comfortable ride quality, lightweight frame, efficient electric motor.",
+                            Braking_System: "Front and rear disc brakes for enhanced safety.",
+                            Wheel_Size: "Optimized wheel size for stability and smooth rides.",
+                            TopSpeed: "25 km/h.",
+                            motor: "250W high-efficiency hub motor.",
+                            Warranty: "3 years battery warranty for peace of mind.",
+                            price: "Find out our best deals! Contact us for pricing details.",
+                            Manufacturing_Location: "Manufactured in India."
+                        }
+
+                            ;
+
+                    case '15':
+                        return {
+                            name: "Eblu Thrill",
+                            image: "Photos/Scooties/Eblu Thrill.jpg",
+                            description: "Eblu Thrill is a stylish and lightweight electric bicycle designed for young riders, featuring a 6Ah battery, pedal-assist sensor, and a powerful detachable battery for easy riding.",
+                            Space: "Compact frame with ergonomic design for comfortable riding.",
+                            color: "Available in multiple vibrant colors.",
+                            Display: "Digital speedometer for real-time tracking.",
+                            Battery: "6Ah battery with a detachable option for convenience.",
+                            Charging_time: "2 to 2.5 hours for a full charge.",
+                            Performance: "Smooth riding experience with pedal-assist functionality.",
+                            Additional_Features: "Lightweight frame, stylish design, easy-to-use controls, pedal-assist sensor.",
+                            Braking_System: "Drum brakes for reliable stopping power.",
+                            Wheel_Size: "Optimized for stability and comfort.",
+                            TopSpeed: "Designed for safe urban commuting.",
+                            motor: "Efficient electric motor with pedal-assist technology.",
+                            Warranty: "Standard warranty on battery and components.",
+                            price: "Find out our best deals! Contact us for pricing details.",
+                            Manufacturing_Location: "Manufactured in India."
+                        }
+                    case '16':
+                        return {
+                            name: "Mudit Ridth Loader (three wheeler)",
+                            image: "Photos/Scooties/Eblu spin.png",
+                            description: "Eblu Spin is an electric cycle designed for modern urban mobility, featuring a 250W motor, 0.43 kWh battery, and a 50 km range per charge, making it ideal for eco-friendly commuting.",
+                            Space: "Compact and ergonomic frame with a comfortable seating position.",
+                            color: "Available in multiple stylish colors to match your personality.",
+                            Display: "Digital speedometer for real-time tracking.",
+                            Battery: "0.43 kWh battery with a range of 50 km per charge.",
+                            Charging_time: "Standard charging time for optimized battery performance.",
+                            Performance: "Top speed of 25 km/h, perfect for urban commuting.",
+                            Additional_Features: "Double disc brakes, comfortable ride quality, lightweight frame, efficient electric motor.",
+                            Braking_System: "Front and rear disc brakes for enhanced safety.",
+                            Wheel_Size: "Optimized wheel size for stability and smooth rides.",
+                            TopSpeed: "25 km/h.",
+                            motor: "250W high-efficiency hub motor.",
+                            Warranty: "3 years battery warranty for peace of mind.",
+                            price: "Find out our best deals! Contact us for pricing details.",
+                            Manufacturing_Location: "Manufactured in India."
+                        }
+
+                            ;
+                    case '17':
+                        return {
+
+                            name: "Mudit Ridh SL",
+                            image: "Photos/Scooties/PHOTO-2025-05-05-19-43-15.jpg",
+                            description: "Mudit Ridh SL is an innovative electric vehicle brand specializing in eco-friendly scooters with high-performance lithium batteries, advanced BLDC motors, and smart controllers for efficient urban commuting.",
+                            Space: "Designed for comfort with spacious legroom and practical storage options.",
+                            color: "Available in multiple stylish colors to suit every rider.",
+                            Display: "Advanced digital display for real-time tracking and monitoring.",
+                            Battery: "Lithium-Ion and Lead-Acid options, offering reliable performance and long-range capacity.",
+                            Charging_time: "3 to 6 hours, based on the variant and battery type.",
+                            Performance: "Optimized for smooth travel with extended range per charge.",
+                            Additional_Features: "USB Charging Port, Reverse Button, Parking Switch, High-durability Shock Absorbers, Fire-resistant Wiring, Waterproof Switches, Suitable for Indian roads, Modern Display.",
+                            Braking_System: "Front Disc Brake, Rear Drum Brake for superior control.",
+                            Wheel_Size: "12-inch sturdy wheels ensuring stability and smooth rides.",
+                            TopSpeed: "Designed for optimal urban speed with efficiency.",
+                            motor: "High-performance BLDC hub-mounted motor.",
+                            Warranty: "3 years on motor, battery, and vehicle.",
+                            price: "Find out our best deals! Contact us for pricing details.",
+                            Manufacturing_Location: "Manufactured in Kolkata, West Bengal, India.",
+                        }
+                    case '10':
+                        return {
+                            name: 'Model X13',
+                            image: 'feo.jpg',
+                            description: 'The Model X7 is a high-performance scooter.',
+                            price: 'Find out our best deals! Contact us for pricing details.'
+                        };
+                    default:
+                        return {
+                            name: 'Unknown Model',
+                            image: 'feo.jpg',
+                            description: 'Details not available.',
+                            price: 'Find out our best deals! Contact us for pricing details.'
+                        };
+                }
+            }
+
+        });
+
+        function bookScooter(scooterName) {
+            alert('Booking requested for: ' + scooterName);
+            // You can replace the alert with a more sophisticated booking process
+            // such as redirecting to a booking form or sending data to a server.
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="Photos/PHOTO-2025-03-22-22-49-42.jpg" alt="Showroom Logo">
+            <h1>KJ Enterprise</h1>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#home"><b>Home</b></a>
+        <a href="#models"><b>Models</b></a>
+        <a href="#about"><b>About Us</b></a>
+        <a href="https://forms.gle/bnW1b11bcA2dQeLC8"><b>Contact Us</b></a>
+        <a href="Servises.html"><b>Our Other Service & Activities</b></a>
+        <a href="https://forms.gle/a2Bm2GzZv97q79ik9"><b>Our Scholarship</b></a>
+
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Discover the Future of Urban Mobility</h2>
+            <p>🌿Experience the thrill of electric scooters with zero emissions.</p>
+            <a href="#models" class="btn">Explore Our Models</a>
+        </div>
+    </section>
+
+
+    <!-- Marquee Section -->
+    <section class="marquee-container">
+        <div class="marquee-content">
+            <a href="JSVES.html"><i class="fas fa-graduation-cap" style="font-size: 3em;
+            margin-right: 5px;"></i><img src="Photos/PHOTO-2025-04-01-17-58-30.jpg" alt="Scooter Model 1"
+                    style="width: 74px; height: 60px; border-radius: 5px;"></a><b>Social Work</b>
+
+
+            <a href="Petuk_biriyani.html"><i class="fas fa-utensils" style="font-size: 3em; margin-right: 5px;"></i><img
+                    src="   Photos/WhatsApp Image 2025-04-01 at 11.48.13.jpeg" alt="Scooter Model 1"
+                    style="width: 74px; height: 60px; border-radius: 5px;"></a><b>Petuk Biryani</b>
+
+            <a href="Gas.html"><i class="fas fa-fire" style="font-size: 3em; margin-right: 5px;"></i><img
+                    src="Photos/WhatsApp Image 2025-04-01 at 11.48.17.jpeg" alt="Scooter Model 1"
+                    style="width: 74px; height: 60px; border-radius: 5px;"></a><b>JALCHAK Gas</b>
+
+            <a href="JNYC.html"><i class="fas fa-laptop" style="font-size: 3em; margin-right: 5px;"></i><img
+                    src="Photos/PHOTO-2025-04-01-11-48-21.jpg" alt="Scooter Model 1"
+                    style="width: 74px; height: 60px; border-radius: 5px;"></a><b>JALCHAK N.Y.C.</b>
+
+            <a href="Jana_Variety_Store.html"><i class="fas fa-shopping-cart"
+                    style="font-size: 3em; margin-right: 5px;"></i><img src="Photos/PHOTO-2025-04-01-17-46-33.jpg"
+                    alt="Scooter Model 1" style="width: 74px; height: 60px; border-radius: 5px;"></a><b><b>JANA Variety
+                    Store</b></b>
+
+
+        </div>
+    </section>
+
+    </section>
+    <section id="models" class="models-section">
+        <h2>Our Electric Scooty Models</h2>
+        <div class="models-container">
+            <!-- Add models here -->
+        </div>
+    </section>
+
+    <section id="scooter" class="scooter-section">
+        <h2></h2>
+        <div class="scooter-container">
+            <div class="scooter-card">
+                <img src="Photos/feo.jpg" alt="Scooter Model 1">
+                <h3>Eblu Feo X</h3>
+                <p>The Godawari Eblu Feo X is an electric scooter designed for family use, offering extra storage and
+                    comfort.</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="1">View Details</a>
+
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+
+            </div>
+            <div class="scooter-card">
+                <img src="Photos/Scooties/King02.jpg" alt="Scooter Model 2">
+                <h3><b>Mudit Ridh KING</b></h3>
+                <p>The Mudit Ridh KING is a stylish, eco-friendly electric scooter with a BLDC motor, waterproof rating,
+                    and 60V battery. It features a color display, reverse mode, USB charging, and 190mm ground
+                    clearance, making it perfect for daily commuting.</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="2">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+            <div class="scooter-card">
+                <img src="Photos/Scooties/Explorer02.jpg" alt="Scooter Model 3">
+                <h3>Mudit Ridh EXPLORER</h3>
+                <p>The Mudit Ridh Xplorer is an efficient electric scooter with a 250W BLDC motor, 100-110 km range, and
+                    190mm ground clearance, ideal for urban commuting.</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="3">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+            <div class="scooter-card">
+                <img src="Photos/Scooties/Impulser02.jpg" alt="Scooter Model 4">
+                <h3>Mudit Ridh IMPULSER</h3>
+                <p>The Mudit Ridh Impulser is a powerful electric scooter with a 250W BLDC motor, 100-110 km range, and
+                    190mm ground clearance, designed for smooth urban commuting.</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="4">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+            <div class="scooter-card">
+                <img src="Photos/Scooties/Loader02.jpg" alt="Scooter Model 5">
+                <h3>Mudit Ridh LOADER</h3>
+                <p>The Mudit Ridh Loader is a durable electric scooter designed for heavy-duty transport, featuring a
+                    250W BLDC motor, 100-120 km range, and 400 kg load capacity.</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="5">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+            <div class="scooter-card">
+                <img src="Photos/Scooties/Lyra02.jpg" alt="Scooter Model 6">
+                <h3>Mudit Ridh LYRA</h3>
+                <p>The Mudit Ridh Lyra is a sleek and efficient electric scooter with a 250W BLDC motor, 100-110 km
+                    range, and 190mm ground clearance, perfect for urban commuting.</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="6">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+
+            <div class="scooter-card">
+                <img src="Photos/Scooties/Neon02.jpg" alt="Scooter Model 7">
+                <h3>Mudit Ridh NEON</h3>
+                <p>The Mudit Ridh Neon is a high-performance electric scooter with a powerful 800-3000W BLDC motor, 180
+                    km range, and 190mm ground clearance, designed for smooth urban commuting.</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="7">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+
+            <div class="scooter-card">
+                <img src="Photos/Scooties/Rover02.jpg" alt="Scooter Model 8">
+                <h3>Mudit Ridh ROVER</h3>
+                <p>The Mudit Ridh Rover is a powerful electric scooter with a 500-3000W BLDC motor, 70-90 km range, and
+                    190mm ground clearance, designed for smooth urban commuting.</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="8">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+            <div class="scooter-card">
+                <img src="Photos/Scooties/Zingo02.jpg" alt="Scooter Model 9">
+                <h3>Mudit Ridh ZIGMO</h3>
+                <p>The Mudit Ridh Zigmo is a compact and efficient electric scooter with a 250W BLDC motor, 80-100 km
+                    range, and 190mm ground clearance, ideal for urban commuting.</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="9">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+            <div class="scooter-card">
+                <img src="Photos/Scooties/PHOTO-2025-05-05-19-43-15.jpg" alt="Scooter Model 17">
+                <h3>Mudit Ridh SL</h3>
+                <p>Mudit Ridh SL is an innovative electric vehicle brand specializing in eco-friendly scooters with
+                    high-performance lithium batteries, advanced BLDC motors, and smart controllers for efficient urban
+                    commuting.</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="17">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+            <div class="scooter-card">
+                <img src="Photos/Scooties/Eblu spin.png" alt="Scooter Model 14">
+                <h3>Eblu Spin</h3>
+                <p>Eblu Spin is an electric cycle designed for urban commuting. It features a 250W motor, a 0.43 kWh
+                    battery, and a range of 50 km per charge with a top speed of 25 km/h. Built for efficiency, it
+                    includes overcurrent protection, portable charging, and a sturdy metal carrier, making it ideal for
+                    both personal and delivery use. 🚲</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="14">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+            <div class="scooter-card">
+                <img src="Photos/Scooties/Eblu Thrill.jpg" alt="Scooter Model 15">
+                <h3>Eblu Thrill</h3>
+                <p>Eblu Thrill is an electric bicycle designed for young riders, including school children. It features
+                    a 6Ah battery, a paddle assist sensor, and a lightweight, stylish frame for easy riding. With a
+                    focus on comfort and convenience, it allows both motor-driven and manual pedaling options. You can
+                    explore more details here. 🚲</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="15">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="models" class="models-section">
+        <h2>Our Electric Scooty Models</h2>
+        <div class="models-container">
+            <!-- Add models here -->
+        </div>
+    </section>
+
+    <section id="scooter" class="scooter-section">
+        <h2></h2>
+        <div class="scooter-container">
+            <div class="scooter-card">
+                <img src="Photos/Scooties/Heavy02 2.jpg" alt="Scooter Model 1">
+                <h3>Mudit Ridh HEAVY</h3>
+                <p>Mudit Ridh HEAVY is a three-wheeler electric vehicle, likely designed for durability and efficient
+                    transportation. While specific details about this model aren't widely available, Mudit Ridh
+                    specializes in eco-friendly electric vehicles with advanced features like BLDC motors, smart
+                    controllers, and high-performance lithium batteries.</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="10">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+            <div class="scooter-card">
+                <img src="Photos/Scooties/Re-eco 2.jpg" alt="Scooter Model 11">
+                <h3>Mudit Ridh RE-ECO</h3>
+                <p>Mudit Ridh RE-ECO is a leading innovator in eco-friendly transportation, specializing in
+                    high-performance electric scooters and motorcycles. With advanced BLDC motors, smart controllers,
+                    and durable lithium batteries, our vehicles are designed for efficiency, reliability, and
+                    sustainability. Whether for urban commuting or long-distance travel, Mudit Ridh RE-ECO delivers
+                    cutting-edge technology to power a cleaner, greener future.</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="11">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+            <div class="scooter-card">
+                <img src="Photos/Scooties/Flexi02 2.jpg" alt="Scooter Model 12">
+                <h3>Mudit Ridh FLEXI</h3>
+                <p>Mudit Ridh FLEXI is a cutting-edge three-wheeler electric vehicle, designed for adaptability and
+                    efficiency. With a powerful BLDC motor, smart controller, and high-performance lithium battery, it
+                    offers a smooth, eco-friendly ride tailored for modern transportation needs. Built for durability
+                    and sustainability, FLEXI redefines urban mobility with innovative technology and smart engineering.
+                </p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="12">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+            <div class="scooter-card">
+                <img src="Photos/Scooties/Flexi02 2.jpg" alt="Scooter Model 16">
+                <h3>Mudit Ridth Loader (three wheeler)</h3>
+                <p>Mudit Ridh Loader is a powerful three-wheeler electric vehicle, designed for efficient cargo
+                    transportation. Equipped with a high-performance BLDC motor, smart controller, and durable lithium
+                    battery, it ensures reliability and sustainability for commercial and industrial use. Built for
+                    strength and adaptability, Loader redefines eco-friendly logistics with cutting-edge technology.</p>
+                <a href="#" class="btn view-details-btn" data-scooter-id="16">View Details</a>
+                <a href="tel:9733579705" class="book-button">Call to Book</a>
+            </div>
+        </div>
+    </section>
+    </section>
+
+
+
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p>We are dedicated to providing high-quality electric scooters that are both eco-friendly and fun to ride.
+                Our mission is to revolutionize urban transportation.</p>
+            <ul>
+                <li>You can get our scooties at a minimum amount of downpayment.</li>
+                <li>You can get various types of finance options.</li>
+                <li>5 years Insurance Policy (One O.D)</li>
+                <li>Battery, motor, charger, controller and converter with 5 years warranty.</li>
+                <li>10 free services.</li>
+                <li>24 X 7 on rode servicings.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; KJ Enterprise Medinipur</p>
+        <br>
+        kjenterprisemedinipur@gimal.com
+        <br>
+        Mob:- 9733579705//8617054124//9800649668
+        <br>
+        Address:- JALCHAK, PINGLA, 771155,<Br>
+        Jana store, ground floor, near the Tilda Primary School, Paschim Medinipur, West Bengal
+    </footer>
+
+
+    <!-- Modal -->
+    <div id="scooterModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <!-- Scooter details will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Call Button -->
+    <div class="call-button">
+        <a href="tel:919733579705">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-button">
+        <a href="https://wa.me/919800459348" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Location Button -->
+    <div class="location-button">
+        <a href="https://maps.app.goo.gl/Qt3uM1En4fWWrsxa9?g_st=aw" target="_blank">
+            <i class="fas fa-map-marker-alt"></i>
+        </a>
+        <!-- Inquiry Button -->
+        <div class="inquiry-button">
+            <a href="https://forms.gle/bnW1b11bcA2dQeLC8" target="_blank">
+                <i class="fas fa-question"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Facebook Button -->
+    <div class="facebook-button">
+        <a href="https://www.facebook.com/profile.php?id=61562456885938" target="_blank">
+            <i class="fab fa-facebook"></i>
+        </a>
+    </div>
+</body>
+
+</html>
