@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petuk Biryani - Authentic Biryani Experience</title>
+    <link rel="icon" href="Photos/petuk logo.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            background-image: url('Photos/WhatsApp Image 2025-04-01 at 11.48.13.jpeg');
+            /*background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Optional: Add a fallback background color */
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            /* Choose a better font */
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            /* White background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Rounded Logo */
+        .rounded-logo {
+            border-radius: 50%;
+            /* Makes the logo round */
+            width: 100px;
+            /* Adjust size as needed */
+            height: 100px;
+            object-fit: cover;
+            /* Prevents distortion */
+        }
+
+        header {
+            background-color: #e44d26;
+            /* Red header */
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Center the logo and title */
+        }
+
+        .logo img {
+            margin-right: 1rem;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #fff;
+            /* White title */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            /* White links */
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ccc;
+            /* Light gray on hover */
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('Photos/biryani_background.jpeg');
+            /* A more relevant background image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 5rem 0;
+            position: relative;
+            /* For the overlay */
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Dark overlay for better readability */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            /* Ensure content is above the overlay */
+            padding: 2rem;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .order-button {
+            background-color: #fff;
+            /* White button */
+            color: #e44d26;
+            /* Red text */
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .order-button:hover {
+            background-color: #ccc;
+            /* Light gray on hover */
+            color: #e44d26;
+        }
+
+        /* Menu Section */
+        .menu {
+            padding: 4rem 0;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+
+        .menu h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #e44d26;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Added shadow effect */
+            padding: 1.5rem;
+            width: 300px;
+            text-align: left;
+            transition: transform 0.3s ease;
+            /* Add transition for smooth animation */
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+            /* Scale up on hover */
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #e44d26;
+        }
+
+        .menu-item .description {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+
+        .menu-item .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 0;
+            text-align: center;
+            background-color: #e44d26;
+            color: #fff;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #e44d26;
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        /* Keyframes for the fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Apply the fade-in animation to the hero content */
+        .hero-content {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="background-color: #e44d26;">
+        <div class="logo" style="display: flex; align-items: center; justify-content: center;">
+            <img src="Photos/petuk logo.jpeg" alt="Petuk Biryani Logo" class="rounded-logo" style="border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover; margin-right: 1rem;">
+            <h1 style="margin: 0;
+    font-size: 2rem;
+    color: #fff;">Petuk Biryani</h1>
+        </div>
+        <nav>
+            <ul style=" list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;">
+                <li style=" margin: 0 1.5rem;"><a href="#home" style="text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;"><b>Home</b></a></li>
+                <li style=" margin: 0 1.5rem;"><a href="#menu" style="text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;"><b>Menu</b></a></li>
+                <li style=" margin: 0 1.5rem;"><a href="#about" style="text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;"><b>About Us</b></a></li>
+                <li style=" margin: 0 1.5rem;"><a href="#contact" style="text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;"><b>Contact</b></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero" style=" background-image: url('Photos/biryani_background.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 0;
+    position: relative;">
+        <div class="hero-content" style="position: relative;
+    z-index: 2;
+    padding: 2rem;">
+            <h2 style=" font-size: 3rem;
+    margin-bottom: 1rem;">Welcome to Petuk Biryani</h2>
+            <h4 style=" font-size: 2rem;
+    margin-bottom: 1rem; font-style: italic;">😋Good food. Great memories. FSSAI-approved quality!🥘</h4>
+            <p style="font-size: 1.2rem;
+    margin-bottom: 2rem;">Experience the authentic taste of biryani, made with love and the finest ingredients.</p>
+            <a href="tel:+919733579705" class="order-button" style=" background-color: #fb0303;
+            color: #fbf8f7;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;">Order and Call</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu" style=" padding: 4rem 0;
+    text-align: center; background-color: #f8f8f8;">
+        <h2 style="font-size: 2.5rem;
+    margin-bottom: 3rem; color: #e44d26;">Our Menu</h2>
+        <div class="menu-items" style=" display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;">
+            <div class="menu-item" style=" background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    /* Add transition for smooth animation */">
+                <img src="Photos/Chicken Biryani.jpeg" alt="Chicken Biryani" style="width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;">
+                <h3 style=" font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #e44d26;">Chicken Biryani 😋</h3>
+                <p class="description" style="font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;">🔥 Petuk Biryani’s Special Chicken Biryani 🍗 Experience the perfect blend of tender chicken,
+                    fragrant basmati rice, and rich spices, slow-cooked to perfection. Every bite is packed with
+                    irresistible aroma and flavor—an unforgettable feast!</p>
+                <span class="price" style=" font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 1rem;">₹220</span>
+                <a href="tel:+919733579705" class="order-button" style=" background-color: #fb0303;
+               color: #fbf8f7;
+               padding: 1rem 2rem;
+               text-decoration: none;
+               border-radius: 5px;
+               font-weight: bold;
+               transition: background-color 0.3s ease;">Order and Call</a>
+            </div>
+            <div class="menu-item" style=" background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    /* Add transition for smooth animation */">
+                <img src="Photos/Chicken Momo.jpeg" alt="Chicken Biryani" style="width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;">
+                <h3 style=" font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #e44d26;">Chicken Momo 😋</h3>
+                <p class="description" style="font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;">🥟 Petuk Biryani’s Chicken Momo 🍗 Soft, juicy dumplings filled with flavorful minced
+                    chicken, perfectly steamed and served with a spicy dipping sauce. A bite-sized delight that packs a
+                    punch of taste!</p>
+                <span class="price" style=" font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 1rem;">₹220</span>
+                <a href="tel:+919733579705" class="order-button" style=" background-color: #fb0303;
+                color: #fbf8f7;
+                padding: 1rem 2rem;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background-color 0.3s ease;">Order and Call</a>
+            </div>
+            <div class="menu-item" style=" background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    /* Add transition for smooth animation */">
+                <img src="Photos/chau.jpeg" alt="Masala Chaumin" style="width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;">
+                <h3 style=" font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #e44d26;">Masala Chaumin 😋</h3>
+                <p class="description" style="font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;">🍜 Petuk Biryani’s Masala Chowmein 🌶️ Spicy, stir-fried noodles tossed with vibrant veggies
+                    and bold masala flavors, creating the perfect balance of heat and taste. A street-style favorite,
+                    made just for you!</p>
+                <span class="price" style=" font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 1rem;">₹60</span>
+                <a href="tel:+919733579705" class="order-button" style=" background-color: #fb0303;
+                color: #fbf8f7;
+                padding: 1rem 2rem;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background-color 0.3s ease;">Order and Call</a>
+            </div>
+            <div class="menu-item" style=" background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    /* Add transition for smooth animation */">
+                <img src="Photos/WhatsApp Image 2025-04-01 at 11.48.13 2.jpeg" alt="Egg Roll" style="width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;">
+                <h3 style=" font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #e44d26;">Egg Roll 😋 </h3>
+                <p class="description" style="font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;">🌯 Petuk Biryani’s Egg Roll 🍳 Soft, flaky paratha wrapped around a flavorful egg omelette,
+                    topped with zesty sauces and fresh veggies. A street-food classic that never disappoints!</p>
+                <span class="price" style=" font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 1rem;">₹70</span>
+                <a href="tel:+919733579705" class="order-button" style=" background-color: #fb0303;
+                color: #fbf8f7;
+                padding: 1rem 2rem;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background-color 0.3s ease;">Order and Call</a>
+            </div>
+            <div class="menu-item" style=" background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    /* Add transition for smooth animation */">
+                <img src="Photos/chiken chap.jpeg" alt="Chicken Chaap" style="width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;">
+                <h3 style=" font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #e44d26;">Chicken Chaap 😋</h3>
+                <p class="description" style="font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;">🍗 Petuk Biryani’s Chicken Chaap 🌶️ Tender, juicy chicken slow-cooked in a rich, aromatic
+                    blend of spices and creamy marinade. A Mughlai masterpiece that melts in your mouth with every bite!
+                </p>
+                <span class="price" style=" font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 1rem;">₹140</span>
+                <a href="tel:+919733579705" class="order-button" style=" background-color: #fb0303;
+                color: #fbf8f7;
+                padding: 1rem 2rem;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background-color 0.3s ease;">Order and Call</a>
+            </div>
+            <div class="menu-item" style=" background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    /* Add transition for smooth animation */">
+                <img src="Photos/Mutton Biryani.jpg" alt="Mutton Biryani" style="width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;">
+                <h3 style=" font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #e44d26;">Mutton Biryani 😋</h3>
+                <p class="description" style="font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;">🥘 Petuk Biryani’s Mutton Biryani 🍖 Slow-cooked, tender mutton infused with fragrant basmati
+                    rice and a rich blend of spices, delivering deep, royal flavors in every bite. A true feast for
+                    biryani lovers!</p>
+                <span class="price" style=" font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 1rem;">₹280</span>
+                <a href="tel:+919733579705" class="order-button" style=" background-color: #fb0303;
+                color: #fbf8f7;
+                padding: 1rem 2rem;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background-color 0.3s ease;">Order and Call</a>
+            </div>
+            <div class="menu-item" style=" background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    /* Add transition for smooth animation */">
+                <img src="Photos/Chicken-Roll.jpg" alt="Chicken Roll" style="width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;">
+                <h3 style=" font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #e44d26;">Chicken Roll 😋</h3>
+                <p class="description" style="font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;">🌯 Petuk Biryani’s Chicken Roll 🍗 Juicy, flavorful chicken wrapped in a soft, flaky paratha,
+                    topped with zesty sauces and fresh veggies. A street-food favorite packed with taste in every bite!
+                </p>
+                <span class="price" style=" font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 1rem;">₹70</span>
+                <a href="tel:+919733579705" class="order-button" style=" background-color: #fb0303;
+               color: #fbf8f7;
+               padding: 1rem 2rem;
+               text-decoration: none;
+               border-radius: 5px;
+               font-weight: bold;
+               transition: background-color 0.3s ease;">Order and Call</a>
+            </div>
+            <div class="menu-item" style=" background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    /* Add transition for smooth animation */">
+                <img src="Photos/Fried Rice.jpg" alt="Chicken Chaap" style="width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;">
+                <h3 style=" font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #e44d26;">Fried Rice 😋</h3>
+                <p class="description" style="font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;">🍚 Petuk Biryani’s Fried Rice 🍜 Perfectly cooked rice stir-fried with fresh veggies,
+                    flavorful spices, and a touch of wok magic! A comforting, aromatic delight for every food lover.</p>
+                <span class="price" style=" font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 1rem;">₹140</span>
+                <a href="tel:+919733579705" class="order-button" style=" background-color: #fb0303;
+              color: #fbf8f7;
+              padding: 1rem 2rem;
+              text-decoration: none;
+              border-radius: 5px;
+              font-weight: bold;
+              transition: background-color 0.3s ease;">Order and Call</a>
+            </div>
+            <div class="menu-item" style=" background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    /* Add transition for smooth animation */">
+                <img src="Photos/mutton-chops.jpeg" alt="Mutton Chaap" style="width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;">
+                <h3 style=" font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #e44d26;">Mutton Chaap 😋</h3>
+                <p class="description" style="font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;">🍖 Petuk Biryani’s Mutton Chaap 🌶️ Rich, slow-cooked mutton infused with bold spices and a
+                    creamy, aromatic marinade. Tender, flavorful, and absolutely indulgent—this dish is a true Mughlai
+                    delight!</p>
+                <span class="price" style=" font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 1rem;">₹160</span>
+                <a href="tel:+919733579705" class="order-button" style=" background-color: #fb0303;
+    color: #fbf8f7;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;">Order and Call</a>
+            </div>
+            <div class="menu-item" style=" background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    /* Add transition for smooth animation */">
+                <img src="Photos/Chicken Curry.jpg" alt="Chicken Curry" style="width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;">
+                <h3 style=" font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #e44d26;">Chicken Karry 😋</h3>
+                <p class="description" style="font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;">🍛 Petuk Biryani’s Chicken Curry 🍗 Tender chicken simmered in a rich, aromatic gravy infused
+                    with bold spices and creamy texture. A comforting and flavorful dish that pairs perfectly with rice
+                    or naan!</p>
+                <span class="price" style=" font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 1rem;">₹180</span>
+                <a href="tel:+919733579705" class="order-button" style=" background-color: #fb0202;
+    color: #fefdfd;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;">Order and Call</a>
+            </div>
+            <div class="menu-item" style=" background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    /* Add transition for smooth animation */">
+                <img src="Photos/Roti.jpg" alt="Roti" style="width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;">
+                <h3 style=" font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #e44d26;">Delicious Roti 😋</h3>
+                <p class="description" style="font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;">🥯 Petuk Biryani’s Delicious Roti 🔥 Soft, warm, and perfectly cooked to complement every
+                    dish! Whether paired with rich curries or enjoyed on its own, our roti is a simple yet satisfying
+                    delight.</p>
+                <span class="price" style=" font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 1rem;">₹10</span>
+                <a href="tel:+919733579705" class="order-button" style=" background-color: #f90202;
+    color: #fffdfd;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;">Order and Call</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about" style=" padding: 4rem 0;
+    text-align: center;
+    background-color: #f9f5f4; color: #f20707;">
+        <h2 style=" font-size: 2.5rem;
+    margin-bottom: 2rem; font-style: inherit; color: #ff0505;">About Us</h2>
+        <p style=" font-size: 1.1rem;
+    color: #fa0202;
+    margin-bottom: 1rem;">Petuk Biryani is dedicated to bringing you the most authentic and delicious biryani
+            experience.
+            We are
+            FSSAI approved, ensuring the highest standards of hygiene and quality.</p>
+        <p style=" font-size: 1.1rem;
+    color: #f90000;
+    margin-bottom: 1rem;">Our biryani is made with fresh, locally sourced ingredients and a secret blend of spices
+            passed down through
+            generations.</p>
+        <p style=" font-size: 1.1rem;
+    color: #f91414;
+    margin-bottom: 1rem;">Welcome to Petuk Biryani, where flavors meet authenticity! As an FSSAI-approved
+            restaurant, we prioritize hygiene, quality, and taste, ensuring every meal is crafted with the finest
+            ingredients and utmost care. Whether you're craving a hearty feast or a delightful snack, we serve dishes
+            that bring comfort and joy to your table. Join us for an unforgettable dining experience—because great food
+            begins with great standards!</p>
+
+    </section>
+
+    <section id="contact" class="contact" style="padding: 4rem 0;
+    text-align: center; background-color: #fa8686;">
+        <h2 style="font-size: 2.5rem;
+    margin-bottom: 2rem; color: #e44d26;">Contact Us</h2>
+        <p style=" font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;">Visit us at: Jalchak (nera primary school), Pingla, Paschim Medinipur</p>
+        <p style=" font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;">Call us: 9733579705 // 8327562702</p>
+        <p style=" font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;">Email us: [Your Email Address]</p>
+    </section>
+
+    <footer style=" background-color: #fc0303;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;">
+        <p>&copy; 2025 Petuk Biryani. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
