@@ -1,4 +1,4 @@
- /* General Styles */
+        /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -15,3 +15,242 @@
             padding: 0 20px;
         }
 
+        /* Header Styles */
+        header {
+            background: #3498db;
+            /* A cool blue */
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header #branding h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        header nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        header nav li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #ecf0f1;
+        }
+
+        /* Business Section Styles */
+        .business-section {
+            padding: 30px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            /* Added to contain floated elements */
+        }
+
+        .business-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .business-section img {
+            width: 100%;
+            max-width: 400px;
+            /* Increased max-width */
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 5px;
+            float: left;
+            /* Float image to the left */
+            margin-right: 20px;
+            /* Add some spacing to the right of the image */
+        }
+
+        .business-section h2 {
+            font-size: 1.75em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .business-section p {
+            font-size: 1.1em;
+            color: #555;
+            text-align: justify;
+            /* Justify the text */
+        }
+
+        .business-section::after {
+            content: "";
+            display: table;
+            clear: both;
+            /* Clear the float */
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header #branding {
+                margin-bottom: 10px;
+            }
+
+            header nav li {
+                margin: 0 10px;
+            }
+
+            .business-section img {
+                float: none;
+                margin: 0 auto 20px;
+                max-width: 100%;
+            }
+        }
+
+        /* Order Gas Button Styles */
+        .order-gas-button {
+            background-color: #2ecc71;
+            /* A bright green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            /* Ensure it's not underlined if it's an <a> tag */
+            display: inline-block;
+            /* Make it a block-level element */
+            margin-top: 10px;
+            /* Add some spacing above the button */
+        }
+
+
+        .order-gas-button:hover {
+            background-color: #27ae60;
+        }
+
+        .order-food-button {
+            background-color: #fd0404;
+            /* A bright green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            /* Ensure it's not underlined if it's an <a> tag */
+            display: inline-block;
+            /* Make it a block-level element */
+            margin-top: 10px;
+            /* Add some spacing above the button */
+        }
+
+        .order-food-button:hover {
+            background-color: #27ae60;
+        }
+
+        .food-visit-button {
+            background-color: #fb5407;
+            /* A bright green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            /* Ensure it's not underlined if it's an <a> tag */
+            display: inline-block;
+            /* Make it a block-level element */
+            margin-top: 10px;
+            /* Add some spacing above the button */
+        }
+
+        .food-visit-button:hover {
+            background-color: #27ae60;
+        }
+
+        .visit-gas-button {
+            background-color: #df440b;
+            /* A bright green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            /* Ensure it's not underlined if it's an <a> tag */
+            display: inline-block;
+            /* Make it a block-level element */
+            margin-top: 10px;
+            /* Add some spacing above the button */
+        }
+
+        .visit-gas-button:hover {
+            background-color: #27ae60;
+        }
+
+        .get-admission-button {
+            background-color: #078dfb;
+            /* A bright green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            /* Ensure it's not underlined if it's an <a> tag */
+            display: inline-block;
+            /* Make it a block-level element */
+            margin-top: 10px;
+            /* Add some spacing above the button */
+        }
+
+        .get-admission-button:hover {
+            background-color: #27ae60;
+        }
