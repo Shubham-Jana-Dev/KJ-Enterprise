@@ -6,36 +6,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jalchak Swami Vivekanada Education Society</title>
     <link rel="icon" href="assets/PHOTO-2025-04-01-17-58-30.jpg" type="image/jpeg">
+    <style>
+        /* Modern CSS Reset & Variables */
+        :root {
+            --primary-blue: #3498db;
+            --dark-navy: #2c3e50;
+            --success-green: #27ae60;
+            --bg-gray: #f8f9fa;
+            --text-dark: #333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+        }
+
+        /* Header & Logo */
+        header {
+            background: linear-gradient(135deg, var(--primary-blue), #2980b9);
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+
+        header img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: var(--shadow);
+            margin-bottom: 15px;
+        }
+
+        header h1 { margin: 10px 0 5px; font-size: 1.8rem; }
+        header h3 { margin: 0; font-weight: 300; opacity: 0.9; }
+
+        /* Navigation */
+        nav {
+            background-color: var(--dark-navy);
+            padding: 0.8rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 5px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--primary-blue); }
+
+        /* Section Layout */
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        h2 {
+            color: var(--dark-navy);
+            border-bottom: 3px solid var(--primary-blue);
+            display: inline-block;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+        }
+
+        /* Lists */
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.3s;
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+
+        .btn-green { background-color: var(--success-green); color: white; }
+        .btn-green:hover { background-color: #219150; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--dark-navy);
+            color: white;
+            margin-top: 50px;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 600px) {
+            nav a { display: block; padding: 10px; border-bottom: 1px solid #3e4f5f; }
+            section { margin: 15px; padding: 20px; }
+        }
+    </style>
 </head>
 
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333;">
+<body>
 
-    <header style="background-color: #3498db; color: white; padding: 1rem; text-align: center;">
-        <img src="assets/PHOTO-2025-04-01-17-58-30.jpg" alt="JSVES Logo"
-            style="width: 150px; height: 150px; border-radius: 50%;">
+    <header>
+        <img src="assets/PHOTO-2025-04-01-17-58-30.jpg" alt="JSVES Logo">
         <h1>Jalchak Swami Vivekanada Education Society</h1>
         <h3>Regd. No.- S/2L/30736</h3>
     </header>
-    <nav style="background-color: #2c3e50; color: white; padding: 0.5rem; text-align: center;">
-        <a href="#about" style="color: white; text-decoration: none; padding: 0.5rem;">About</a> |
-        <a href="#career" style="color: white; text-decoration: none; padding: 0.5rem;">Career Courses</a> |
-        <a href="#welfare" style="color: white; text-decoration: none; padding: 0.5rem;">Welfare & Development</a> |
-        <a href="#counseling" style="color: white; text-decoration: none; padding: 0.5rem;">Counseling</a> |
-        <a href="#scholarships" style="color: white; text-decoration: none; padding: 0.5rem;">Scholarships</a> |
-        <a href="#contact" style="color: white; text-decoration: none; padding: 0.5rem;">Contact</a>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#career">Courses</a>
+        <a href="#welfare">Welfare</a>
+        <a href="#counseling">Counseling</a>
+        <a href="#scholarships">Scholarships</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <section id="about" style="padding: 20px; background-color: #fff; margin: 20px;">
+    <section id="about">
         <h2>About Us</h2>
-        <p>Jalchak Swami Vivekanada Education Society is dedicated to providing quality education and support to
-            students in need. We strive to empower individuals through knowledge and skills, enabling them to achieve
-            their full potential.</p>
+        <p>Jalchak Swami Vivekanada Education Society is dedicated to providing quality education and support to students in need. We strive to empower individuals through knowledge and skills, enabling them to achieve their full potential.</p>
     </section>
 
-    <section id="career" style="padding: 20px; background-color: #fff; margin: 20px;">
+    <section id="career">
         <h2>Career Courses</h2>
-        <p>Explore our range of career-oriented courses designed to equip you with the skills needed for a successful
-            future. We offer courses in:</p>
+        <p>Explore our range of career-oriented courses designed to equip you with the skills needed for a successful future:</p>
         <ul>
             <li>Web Development</li>
             <li>Graphic Design</li>
@@ -43,82 +157,57 @@
             <li>Computer Literacy</li>
         </ul>
     </section>
-    <h2>Scholarships</h2>
-    <p><strong>Jalchak Swami Vivekananda Education Society – Empowering Education for All</strong></p>
-    <p>
-        At Jalchak Swami Vivekananda Education Society, we believe that education should be accessible to everyone, 
-        regardless of financial constraints. Dedicated to uplifting underprivileged students, we provide scholarship 
-        opportunities to help them achieve their academic dreams.
-    </p>
-    <p>
-        Inspired by the ideals of Swami Vivekananda, we strive to create a society where every deserving student has 
-        the chance to excel. Our scholarship programs are designed to support students in pursuing their education 
-        and building a brighter future.
-    </p>
-    
-    <a href="https://forms.gle/a2Bm2GzZv97q79ik9" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       style="background-color: #4CAF50; color: white; padding: 12px 25px; text-decoration: none; display: inline-block; border-radius: 5px; font-weight: bold; margin-top: 10px;">
-       Apply for Scholarship
-    </a>
-</section>
 
-    <section id="welfare" style="padding: 20px; background-color: #fff; margin: 20px;">
+    <section id="scholarships" style="border-left: 8px solid var(--success-green);">
+        <h2>Scholarships</h2>
+        <p><strong>Empowering Education for All</strong></p>
+        <p>At Jalchak Swami Vivekananda Education Society, we believe that education should be accessible to everyone, regardless of financial constraints. Inspired by the ideals of Swami Vivekananda, we provide scholarship opportunities to underprivileged students to help them achieve their academic dreams.</p>
+        
+        <a href="https://forms.gle/a2Bm2GzZv97q79ik9" target="_blank" rel="noopener noreferrer" class="btn btn-green">
+            Apply for Scholarship
+        </a>
+    </section>
+
+    <section id="welfare">
         <h2>Welfare and Development</h2>
-        <p>We are committed to the welfare and development of our students and community. Our initiatives include:</p>
+        <p>We are committed to the welfare of our students and community through various initiatives:</p>
         <ul>
             <li>Education & Scholarships</li>
             <li>Health & Nutrition programs</li>
-            <li>organizing blood donation camps</li>
-            <li>We actively work towards helping the poor, providing essential assistance like food, clothing, and
-                medical aid to those in need.</li>
+            <li>Organizing blood donation camps</li>
+            <li>Providing essential assistance (food, clothing, medical aid)</li>
             <li>Free tutoring programs</li>
             <li>Community outreach events</li>
             <li>Skills development workshops</li>
-            <h2>Support Our Mission</h2>
-            <p>If you are interested in supporting our welfare and development initiatives, please contact us.</p>
-            <a href="tel:9733579705"
-                style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; display: inline-block; border-radius: 5px;">Help
-                Us</a>
+        </ul>
+        <h3>Support Our Mission</h3>
+        <p>If you are interested in supporting our welfare and development initiatives, please reach out to us.</p>
+        <a href="tel:9733579705" class="btn btn-green">Help Us</a>
+    </section>
 
+    <section id="counseling">
+        <h2>University Admission Counseling</h2>
+        <p>Expert guidance to help ambitious students secure admissions in top universities. Our comprehensive support includes:</p>
+        <ul style="list-style: none; padding-left: 0;">
+            <li>✅ <strong>Personalized Guidance</strong> – Choosing the best courses for your goals.</li>
+            <li>✅ <strong>Application Assistance</strong> – Crafting standout essays and resumes.</li>
+            <li>✅ <strong>Interview Prep</strong> – Mock interviews to boost confidence.</li>
+            <li>✅ <strong>Financial Aid Support</strong> – Exploring funding and scholarships.</li>
+            <li>✅ <strong>Documentation</strong> – Visa applications and exam strategies (SAT, GRE).</li>
         </ul>
     </section>
 
-    <section id="counseling" style="padding: 20px; background-color: #fff; margin: 20px;">
-        <h2>Counseling for Top University Admissions</h2>
-        <p><b>Jalchak Swami Vivekananda Education Society – </b>Expert University Admission Counseling
-            At Jalchak Swami Vivekananda Education Society, we believe in empowering students with the right guidance
-            and support to secure admissions in top universities. Our University Admission Counseling service is
-            designed to help ambitious students navigate the complex application process with confidence.
-
-            We provide: ✅ Personalized Career Guidance – Helping students choose the best university and course based on
-            their goals. ✅ Application Assistance – Crafting standout essays, resumes, and personal statements that
-            impress admissions panels. ✅ Interview Preparation – Mock interviews and expert insights to boost confidence
-            for university admissions. ✅ Scholarship & Financial Aid Support – Exploring funding opportunities to ease
-            financial burdens. ✅ Comprehensive Support – Assistance with exam strategies (SAT, GRE, etc.), visa
-            applications, and documentation.
-
-            As part of Jalchak Swami Vivekananda Education Society, we are committed to making quality education
-            accessible to all. Join us and take the first step toward securing your dream university admission!</p>
-        <ul>
-
-        </ul>
-    </section>
-
-
-
-    <section id="contact" style="padding: 20px; background-color: #fff; margin: 20px;">
+    <section id="contact">
         <h2>Contact Us</h2>
         <p>For any inquiries, please contact us at:</p>
-        <p></p>
-        <p>Phone: +91 9733579705</p>
+        <p><strong>📍 Address:</strong> Jalchak, Pingla, Paschim Medinipur, West Bengal</p>
+        <p><strong>📞 Phone:</strong> +91 9733579705</p>
     </section>
 
-    <footer style="text-align: center; padding: 10px; background-color: #333; color: white;">
+    <footer>
         &copy; 2025 Jalchak Swami Vivekanada Education Society
         <br>
-        Jalchak, Pingla, 721155, Paschim Medinipur, West Bengal, INDIA
+        <small>Jalchak, Pingla, 721155, Paschim Medinipur, West Bengal, INDIA</small>
     </footer>
 
 </body>
